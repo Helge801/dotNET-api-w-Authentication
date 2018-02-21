@@ -92,6 +92,7 @@
     <Reference Include="System.Net.Http.Formatting, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Cors, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.4\lib\net45\System.Web.Cors.dll</HintPath>
     </Reference>
@@ -220,6 +221,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Models\BoardModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -238,10 +240,30 @@
     <Compile Include="Migrations\201802191852421_ChangedDefaultColumnNames.Designer.cs">
       <DependentUpon>201802191852421_ChangedDefaultColumnNames.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802201802393_testMigration.cs" />
+    <Compile Include="Migrations\201802201802393_testMigration.Designer.cs">
+      <DependentUpon>201802201802393_testMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802201859490_Added_Posts.cs" />
+    <Compile Include="Migrations\201802201859490_Added_Posts.Designer.cs">
+      <DependentUpon>201802201859490_Added_Posts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802210036360_Added_Lookup_to_user.cs" />
+    <Compile Include="Migrations\201802210036360_Added_Lookup_to_user.Designer.cs">
+      <DependentUpon>201802210036360_Added_Lookup_to_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802210044092_Removed_lookup.cs" />
+    <Compile Include="Migrations\201802210044092_Removed_lookup.Designer.cs">
+      <DependentUpon>201802210044092_Removed_lookup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\BoardPointModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\SampleModel.cs" />
+    <Compile Include="Models\PointModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\SoundBoardModel.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -323,6 +345,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802191852421_ChangedDefaultColumnNames.resx">
       <DependentUpon>201802191852421_ChangedDefaultColumnNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802201802393_testMigration.resx">
+      <DependentUpon>201802201802393_testMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802201859490_Added_Posts.resx">
+      <DependentUpon>201802201859490_Added_Posts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802210036360_Added_Lookup_to_user.resx">
+      <DependentUpon>201802210036360_Added_Lookup_to_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802210044092_Removed_lookup.resx">
+      <DependentUpon>201802210044092_Removed_lookup.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

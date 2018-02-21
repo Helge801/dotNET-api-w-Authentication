@@ -76,3 +76,7 @@ C:\Users\Helge801\Documents\Development\Projects\dotNET\WebAPIAuth\WebAPIAuth\bi
 C:\Users\Helge801\Documents\Development\Projects\dotNET\WebAPIAuth\WebAPIAuth\bin\Microsoft.Owin.Security.xml
 C:\Users\Helge801\Documents\Development\Projects\dotNET\WebAPIAuth\WebAPIAuth\bin\Microsoft.Owin.Security.Cookies.xml
 C:\Users\Helge801\Documents\Development\Projects\dotNET\WebAPIAuth\WebAPIAuth\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Helge801\Documents\Development\Projects\dotNET\WebAPIAuth\WebAPIAuth\obj\Debug\WebAPIAuth.Migrations.testMigration.resources
+C:\Users\Helge801\Documents\Development\Projects\dotNET\WebAPIAuth\WebAPIAuth\obj\Debug\WebAPIAuth.Migrations.Added_Posts.resources
+C:\Users\Helge801\Documents\Development\Projects\dotNET\WebAPIAuth\WebAPIAuth\obj\Debug\WebAPIAuth.Migrations.Added_Lookup_to_user.resources
+C:\Users\Helge801\Documents\Development\Projects\dotNET\WebAPIAuth\WebAPIAuth\obj\Debug\WebAPIAuth.Migrations.Removed_lookup.resources

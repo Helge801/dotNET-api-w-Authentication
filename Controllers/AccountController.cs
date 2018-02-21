@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Security.Claims;
 using System.Web.Http;
 using WebAPIAuth.Models;
+using WebAPIAuth;
 
 namespace WebAPI.Controllers
 {
@@ -43,9 +44,40 @@ namespace WebAPI.Controllers
                 Email = identityClaims.FindFirst("Email").Value,
                 FirstName = identityClaims.FindFirst("FirstName").Value,
                 LastName = identityClaims.FindFirst("LastName").Value,
-                LoggedOn = identityClaims.FindFirst("LoggedOn").Value
+                LoggedOn = identityClaims.FindFirst("LoggedOn").Value,
             };
             return model;
+        }
+
+        [HttpGet]
+        [Route("api/GetSampleClaims")]
+        public SampleModel GetSampleClaims()
+        {
+            var identityClaims = (ClaimsIdentity)User.Identity;
+            IEnumerable<Claim> claims = identityClaims.Claims;
+            SampleModel model = new SampleModel()
+            {
+                SampleData = "This is a sample"
+            };
+            return model;
+        }
+
+        [HttpPost]
+        [Route("api/SaveBoard")]
+        public BoardModel SaveBoard(BoardModel model)
+        {
+            var identityClaims = (ClaimsIdentity)User.Identity;
+            IEnumerable<Claim> claims = identityClaims.Claims;
+            var db = new SoundBoardModel();
+            var newModel = new BoardModel()
+            {
+                UserName = identityClaims.FindFirst("Username").Value,
+                PointString = model.PointString,
+                BoardName = model.BoardName
+            };
+            db.Boards.Add(newModel);
+            db.SaveChanges();
+            return newModel;
         }
     }
 }
